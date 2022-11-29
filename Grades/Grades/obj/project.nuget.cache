@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3R6niAla3FJlbpwbem1dI9Ajt9CazfrNuDfu4OWKaE1ss1gz9qYuIo80V4unXKFqCYlQhLn5rkbxa3MrF5NLNQ==",
+  "success": true,
+  "projectFilePath": "/Users/kennaschneider/RiderProjects/Grades/Grades/Grades.csproj",
+  "expectedPackageFiles": [
+    "/Users/kennaschneider/.nuget/packages/coxprogramming.csv/1.1.0/coxprogramming.csv.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

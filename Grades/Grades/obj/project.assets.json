@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "CoxProgramming.CSV/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/CSV.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/CSV.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CoxProgramming.CSV/1.1.0": {
+      "sha512": "yKHOZW2p0hTzmzkuXdrvX3A8n7eNk6c+uieS0/siCrOGuQbNvYsjvU8jH4A8uhj1JjuYVaQW7RBDjzoZLX9hqQ==",
+      "type": "package",
+      "path": "coxprogramming.csv/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "coxprogramming.csv.1.1.0.nupkg.sha512",
+        "coxprogramming.csv.nuspec",
+        "lib/net6.0/CSV.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "CoxProgramming.CSV >= 1.1.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/kennaschneider/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/kennaschneider/RiderProjects/Grades/Grades/Grades.csproj",
+      "projectName": "Grades",
+      "projectPath": "/Users/kennaschneider/RiderProjects/Grades/Grades/Grades.csproj",
+      "packagesPath": "/Users/kennaschneider/.nuget/packages/",
+      "outputPath": "/Users/kennaschneider/RiderProjects/Grades/Grades/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/kennaschneider/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "CoxProgramming.CSV": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/Users/kennaschneider/.dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
