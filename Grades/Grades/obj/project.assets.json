@@ -38,11 +38,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kennaschneider/RiderProjects/Grades/Grades/Grades.csproj",
+      "projectUniqueName": "/Users/kennaschneider/Documents/GitHub/CanvasGradeCalculator/Grades/Grades/Grades.csproj",
       "projectName": "Grades",
-      "projectPath": "/Users/kennaschneider/RiderProjects/Grades/Grades/Grades.csproj",
+      "projectPath": "/Users/kennaschneider/Documents/GitHub/CanvasGradeCalculator/Grades/Grades/Grades.csproj",
       "packagesPath": "/Users/kennaschneider/.nuget/packages/",
-      "outputPath": "/Users/kennaschneider/RiderProjects/Grades/Grades/obj/",
+      "outputPath": "/Users/kennaschneider/Documents/GitHub/CanvasGradeCalculator/Grades/Grades/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kennaschneider/.nuget/NuGet/NuGet.Config"
@@ -51,6 +51,7 @@
         "net6.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -90,7 +91,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/kennaschneider/.dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
