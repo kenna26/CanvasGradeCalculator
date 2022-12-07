@@ -2,11 +2,22 @@
 
 using Csv;
 
+
 Console.WriteLine("Hello, World!");
 
 CSV GradesTable = new CSV();
 
-var classes = new List<string> () {"chem" ,"histroy","english", "math", "spanish"}
+//Get data from txt file
+var file = File.OpenRead("semOneGrades.txt");
+var reader = new StreamReader(file);
+var gradesString = "";
+
+while (!reader.EndOfStream)
+{
+    var line = reader.ReadLine()!;
+    gradesString += line;
+}
+
 var assingments = new List<string>();
 
 for (int i = 0; i < assingments.Count; i++)
@@ -14,5 +25,6 @@ for (int i = 0; i < assingments.Count; i++)
     Row row = new Row()
     {
         { "Classes", "" }
+        {"Category", ""}
     };
 }
