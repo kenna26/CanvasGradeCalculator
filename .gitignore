@@ -5,3 +5,9 @@
 *.cache
 *.props
 *.info
+Grades/Grades/obj/Debug/net6.0/apphost
+*.dll
+*.pdb
+Grades/Grades/bin/Debug/net6.0/.DS_Store
+Grades/Grades/bin/.DS_Store
+Grades/Grades/bin/Debug/.DS_Store
