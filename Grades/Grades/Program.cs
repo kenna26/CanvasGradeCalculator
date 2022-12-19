@@ -7,7 +7,7 @@ var classAndCates = new Dictionary<string, string[]>()
 {
     {"Math", new [] {"All Work"}},
     {"English", new [] {"Assessments", "Participation"}},
-    {"History", new [] {"Section Assessments", "Annotated Bibliography", "Engagement"}},
+    {"History", new [] {"Section Assessments", "An notated Bibliography", "Engagement"}},
     {"Chem", new [] {"Exams", "Labs", "Graded Homework"}},
     {"Spanish", new [] {"Summative Assessments", "Projects/Quizzes", "Daily Practice"}}
     
@@ -66,7 +66,7 @@ while (!quit){
         else if (choice == 3) 
             deleteOneAssignment();
         else if (choice == 4)
-            gradeForOneCate();
+            gradeForOneCate(getClassAndCate());
         else if (choice == 5)
             gradeForOneClass();
         else if (choice == 6)
@@ -74,7 +74,7 @@ while (!quit){
     }
     catch(Exception ex){Console.WriteLine(ex.Message);}
     
-    Console.Clear();
+    //Console.Clear();
 }
 
 //_______METHODS_______
@@ -93,7 +93,7 @@ string getClass()
         first = false;
     }
     classString += ") ";
-    Console.WriteLine(classString);
+    Console.Write(classString);
     var classNum = int.Parse(Console.ReadLine());
     return classAndCates.Keys.ToList()[classNum];
 }
@@ -215,16 +215,35 @@ void deleteOneAssignment()
     Console.WriteLine(dataTable.AllKeys);
 }
 
-void gradeForOneCate()
-{
-    var classAndCate = getClassAndCate();
-    var assignments = dataTable.GetRow("Math-All Work", "Chapter 1 Test");
-    Console.WriteLine(assignments.ToString());
+void gradeForOneCate(string classAndCate) {
+    var cateTable = dataTable.Where(row => row["Class and Category"].Contains(classAndCate)).ToList();
+    var pointsGottenList = cateTable.Select(row => Convert.ToDouble(row["Points Gotten"])).ToList();//list of doubles of values from columb
+    var totalPointsList = cateTable.Select(row => Convert.ToDouble(row["Total Points"])).ToList();
+
+    double pointsGottenTotal = 0;
+    double totalPointsTotal = 0;
+
+    foreach (var element in pointsGottenList)
+        //pointsGottenTotal += element;
+        Console.Write("Hello");
+        //Console.Write(element);
+    foreach (var element in totalPointsList)
+        Console.WriteLine(element);
+        //totalPointsTotal += element;
+    
+    Console.WriteLine(pointsGottenTotal);
+    Console.WriteLine(totalPointsTotal);
+    
+    var finalGrade = Math.Round(pointsGottenTotal / totalPointsTotal, 4) * 100;
+    
+    Console.WriteLine($"Your total grade for {classAndCate} is {finalGrade}");
 }
 
 void gradeForOneClass()
 {
     var theClass = getClass();
+    int[] cateValuesWeighted = new int[];
+    foreach 
 }
 
 void clearTable()
@@ -258,6 +277,9 @@ void clearTable()
     }
 
 }
+
+
+
 
 
 
