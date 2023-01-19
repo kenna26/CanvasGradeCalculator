@@ -7,7 +7,7 @@ var classAndCates = new Dictionary<string, string[]>()
 {
     {"Math", new [] {"All Work"}},
     {"English", new [] {"Assessments", "Participation"}},
-    {"History", new [] {"Section Assessments", "An notated Bibliography", "Engagement"}},
+    {"History", new [] {"Section Assessments", "Annotated Bibliography", "Engagement"}},
     {"Chem", new [] {"Exams", "Labs", "Graded Homework"}},
     {"Spanish", new [] {"Summative Assessments", "Projects/Quizzes", "Daily Practice"}}
     
@@ -66,7 +66,7 @@ while (!quit){
         else if (choice == 3) 
             deleteOneAssignment();
         else if (choice == 4)
-            gradeForOneCate(getClassAndCate());
+            Console.WriteLine($"Your final grade for that category is {gradeForOneCate(getClassAndCate())}");
         else if (choice == 5)
             gradeForOneClass();
         else if (choice == 6)
@@ -215,7 +215,7 @@ void deleteOneAssignment()
     Console.WriteLine(dataTable.AllKeys);
 }
 
-void gradeForOneCate(string classAndCate) {
+double gradeForOneCate(string classAndCate) {
     var cateTable = dataTable.Where(row => row["Class and Category"].Contains(classAndCate)).ToList();
     var pointsGottenList = cateTable.Select(row => Convert.ToDouble(row["Points Gotten"])).ToList();//list of doubles of values from columb
     var totalPointsList = cateTable.Select(row => Convert.ToDouble(row["Total Points"])).ToList();
@@ -234,16 +234,20 @@ void gradeForOneCate(string classAndCate) {
     Console.WriteLine(pointsGottenTotal);
     Console.WriteLine(totalPointsTotal);
     
-    var finalGrade = Math.Round(pointsGottenTotal / totalPointsTotal, 4) * 100;
-    
-    Console.WriteLine($"Your total grade for {classAndCate} is {finalGrade}");
+    return Math.Round(pointsGottenTotal / totalPointsTotal, 4) * 100;
 }
 
 void gradeForOneClass()
 {
     var theClass = getClass();
-    int[] cateValuesWeighted = new int[];
-    foreach 
+    var catesList = classAndCates[theClass];
+    
+    //values of each cate from the class
+    int[] cateValues = new int[classAndCates[theClass].Count()];
+    
+    //iterate through each cate 
+    foreach (var cate in catesList)
+        gradeForOneCate($"{theClass} {cate}");
 }
 
 void clearTable()
